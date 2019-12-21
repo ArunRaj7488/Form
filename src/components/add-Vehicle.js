@@ -110,7 +110,7 @@ export default function AddVehicle() {
                 
                 
                 Model Details:-
-                <Row style={{marginLeft:"10px"}}>
+                <Row style={{marginBottom: '10px'}}>
                 <Col span={6}><lable>Model:-</lable></Col>
                 <Col span={6} >
                  <Select
@@ -132,7 +132,7 @@ export default function AddVehicle() {
                     </Select>
                 </Col>
                 </Row>
-                <Row style={{marginLeft:"10px"}}>
+                <Row style={{marginBottom: '10px'}}>
                 <Col span={6}><lable>Vehicle Photo:-</lable></Col>
                 <Col span={6} style={{marginTop:"10px"}}>
                 <Upload >
@@ -146,7 +146,7 @@ export default function AddVehicle() {
                     
                     Permit Details:-
                 
-                <Row style={{marginLeft:"10px"}}>
+                <Row style={{marginBottom: '10px'}}>
                     <Col span={6}><lable>State:-</lable></Col>
                     <Col span={6}>
                         <Select
@@ -160,23 +160,23 @@ export default function AddVehicle() {
                  </Row>
                 
                 
-                <Row style={{marginLeft:"10px"}}>
+                <Row style={{marginBottom: '10px'}}>
                 <Col span={6}><lable>Permit Expairy:-</lable></Col>
                 <Col span={6} style={{marginTop:"5px"}}> <DatePicker onChange={onChangeRC} /></Col>
               </Row>
               
               
                   Insurance Details:-
-                  <Row style={{marginLeft:"10px"}}>
+                  <Row style={{marginBottom: '10px'}}>
                   <Col span={6}> <lable>Policy Number:-</lable></Col>
                   <Col span={6}> <Input type="text"  /></Col>
                   <Col span={6} style={{marginLeft:"5px"}}> <Input type="text" defaultValue="policy number"/></Col>
                   </Row>
-                  <Row style={{marginLeft:"10px"}}>
+                  <Row style={{marginBottom: '10px'}}>
                   <Col span={6}><lable>Policy expairy</lable> </Col>
                   <Col span={6}><DatePicker onChange={onChangeRC} /></Col>
                   </Row>
-                  <Row>
+                  <Row style={{marginBottom: '10px'}}>
                   <Col span={6}><lable>Fitness certificate Number:-</lable></Col>
                   <Col span={6}> <Input type="text"  /></Col>
                   <Col span={6} style={{marginLeft:"10px"}}><Input type="text" defaultValue="certificate number"/></Col>
@@ -184,26 +184,37 @@ export default function AddVehicle() {
 
                   
                   
+                  <Row style={{marginBottom: '10px'}}><Col span={6}><lable>Fitness Period:-</lable></Col>
+                  <Col span={6}><DatePicker onChange={onChangeRC} /></Col>
+                  <Col sapn={6}> <DatePicker onChange={onChangeRC} /></Col>
+                  </Row>
                   
-                  <lable>Fitness Period:-</lable>
-                    <DatePicker onChange={onChangeRC} />
-                    <DatePicker onChange={onChangeRC} />
-                    <lable>Emissions certificate</lable>
-                    <Input type="text" defaultValue="Emissions"/>
-                    <lable>Emissions expairy</lable>
-                    <DatePicker onChange={onChangeRC} />
                     
-
-
-                    <div>
+                   <Row style={{marginBottom: '10px'}} >
+                   <Col span={6}><lable>Emissions certificate:-</lable></Col>
+                   <Col span={6}><Input type="text" defaultValue="Emissions"/></Col>
+                   </Row>
+                    
+                    <Row style={{marginBottom: '10px'}}>
+                    <Col span={6}><lable>Emissions expairy</lable></Col>
+                    <Col span={6}><DatePicker onChange={onChangeRC} /></Col>
+                    </Row>
                     GPS Details:
-                    <lable>type:-</lable>
-                    <Radio.Group  defaultValue="a">
-                        <Radio.Button value="a">Portable</Radio.Button>
-                        <Radio.Button value="b">Attached</Radio.Button>
-                     </Radio.Group>
-                     <lable>Vender:-</lable>
-                     <Select
+                    <Row style={{marginBottom: '10px'}}>
+                    <Col span={6}><lable>type:-</lable></Col>
+                     <Row>
+                    <Col span={6}><Radio.Group  defaultValue="a">
+                   
+                        <Col><Radio.Button value="a">Portable</Radio.Button></Col>
+                        <Col><Radio.Button value="b">Attached</Radio.Button></Col>
+                       
+                     </Radio.Group></Col>
+                      </Row>
+                     </Row>
+
+                     <Row style={{marginBottom: '10px'}}>
+                     <Col span={6}><lable>Vender:-</lable></Col>
+                     <Col spam={6}><Select
                       showSearch
                       style={{ width: 200 }}
                       placeholder="Select a Vender"
@@ -219,12 +230,15 @@ export default function AddVehicle() {
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
-                    </Select>
-                    <lable>Device IMEI:-</lable>
-                    <input type="text" />
+                    </Select></Col>
+                    </Row>
+                    <Row style={{marginLeft:"10px"}}>
+                    <Col span={6}><lable>Device IMEI:-</lable></Col>
+                    <Col span={6}><input type="text" /></Col>
+                    </Row>
 
 
-                    </div>
+                    
         
 
               </Form>
